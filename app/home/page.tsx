@@ -4,7 +4,8 @@ import React from 'react'
 const page = () => {
   return (
     <div>
-        <h1 className='text-xl font-bold text-black flex justify-center pt-12'> Blog Post</h1>
+        <h1 className='text-4xl font-bold text-black flex justify-center pt-32 pb-4'> Blog Posts</h1>
+        <hr className='w-2/3 mx-auto justify-center text-center py-5' />
         <HomeComponent />
     </div>
   )
