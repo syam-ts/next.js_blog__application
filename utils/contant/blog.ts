@@ -1,39 +1,39 @@
-
 interface IBlogs {
-  article_id: string;
-  title: string;
-  link: string;
-  keywords: string[];
-  creator?: any;
-  description: string;
-  content?: any;
-  pubDate: string;
-  pubDateTZ: string;
-  image_url: string | null;
-  video_url?: any;
-  source_id: string;
-  source_name: string;
-  source_priority: number;
-  source_url: string;
-  source_icon: string;
-  language: string;
-  country: string[];
-  category: string[];
-  sentiment: string;
-  sentiment_stats: ISentimentstats;
-  ai_tag: string[] | null;
-  ai_region: any;
-  ai_org: string[] | null;
-  ai_summary: string;
-  ai_content: string;
-  duplicate: boolean;
+    article_id: string;
+    title: string;
+    link: string;
+    keywords: string[];
+    creator?: any;
+    description: string;
+    content?: any;
+    pubDate: string;
+    pubDateTZ: string;
+    image_url: string | null;
+    video_url?: any;
+    source_id: string;
+    source_name: string;
+    source_priority: number;
+    source_url: string;
+    source_icon: string;
+    language: string;
+    country: string[];
+    category: string[];
+    sentiment: string;
+    sentiment_stats: ISentimentstats;
+    ai_tag: string[] | null;
+    ai_region: any;
+    ai_org: string[] | null;
+    ai_summary: string;
+    ai_content: string;
+    duplicate: boolean;
 }
 interface ISentimentstats {
-  positive: number;
-  neutral: number;
-  negative: number;
+    positive: number;
+    neutral: number;
+    negative: number;
 }
 
+//constant json due to api rate limits ---------------
 export const blogData: IBlogs[] = [
     {
         article_id: "407cf96e5946b767fa2e3afdd38b0630",
