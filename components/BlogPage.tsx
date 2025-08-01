@@ -1,4 +1,5 @@
 import { blogData } from "@/utils/contant/blog";
+import Image from "next/image";
 import React from "react";
 
 interface IBlog {
@@ -46,9 +47,42 @@ const BlogPage: React.FC<IBlogPageProps> = ({ blogId }) => {
     );
 
     return (
-        <div className="pt-44">
-            <h1 className="text-black"> Blog Detils </h1>
-            <h1 className="text-black">{blog?.title}</h1>
+        <div className="pt-44 grid justify-center max-w-5xl mx-auto">
+            <section>
+                <div className="flex gap-5 justify-between">
+                    <div>
+                        <img
+                            src={blog?.image_url as string}
+                            className="w-[40rem] h-[25rem]"
+                            alt="blog-image"
+                        />
+                    </div>
+                    <div className="grid justify-center pt-44">
+                        <ul>
+                            <li>
+                                <h1 className="text-2xl text-black line-clamp-1">
+                                    {blog?.title.slice(0, 20)}
+                                </h1>
+                            </li>
+                            <li>
+                                <p className="text-black text-md">{blog?.language}</p>
+                            </li>
+                            <li>
+                                <span className="text-black text-sm">{blog?.pubDate}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div className="grid gap-3 pt-20">
+                    <span className="text-black text-sm">
+                        {blog?.category} - {blog?.sentiment}
+                    </span>
+                    <p className="text-black text-md">{blog?.description}</p>
+                </div>
+            </section>
         </div>
     );
 };

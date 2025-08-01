@@ -82,7 +82,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ data }) => {
                       cy="12"
                       r="10"
                       stroke="currentColor"
-                      stroke-width="4"
+                      strokeWidth="4"
                     ></circle>
                     <path
                       className="opacity-75"
@@ -105,13 +105,13 @@ const BlogCard: React.FC<BlogCardProps> = ({ data }) => {
       {filteredDatas?.map((blog: IBlogs, index: number) => (
         <div
           key={index}
-          className="flex justify-between text-center gap-5  border-b border-gray-300 p-2 m-4 w-[60rem]"
+          className="flex hover:scale-110 duration-200 justify-between text-center gap-5  border-b border-gray-300 p-2 m-4 w-[60rem]"
         >
           <div>
             <img
               src={blog?.image_url as string}
-              className="w-[15rem] h-[9rem] object-cover"
-              alt="image"
+              className="w-[15rem] h-[9rem] object-cover hover:scale-105 text-black"
+              alt="blog-image"
             />
           </div>
 
