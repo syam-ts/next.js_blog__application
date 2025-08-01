@@ -7,7 +7,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <nav className="bg-white shadow-lg border-b fixed w-screen">
+            <nav className="bg-white shadow-lg border-b fixed w-screen z-1">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
                     <a
                         href="https://flowbite.com/"
@@ -74,7 +74,7 @@ const Navbar = () => {
                                 placeholder="Search..."
                             />
                         </div>
-                        <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white -800 md:-900 -700">
+                        <ul className="flex flex-col p-4 md:p-0 mt-4 font-bold border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white -800 md:-900 -700">
                             <li>
                                 <Link
                                     href="/home"
@@ -85,11 +85,19 @@ const Navbar = () => {
                                 </Link>
                             </li>
                             <li>
-                                <a
-                                    href="#"
+                                <Link
+                                    href="/about"
                                     className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:-blue-500  -gray-700 -white md:-transparent -700"
                                 >
                                     About
+                                </Link>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0  md:-blue-500 -gray-700 -white md:-transparent -700"
+                                >
+                                    Faq
                                 </a>
                             </li>
                             <li>
